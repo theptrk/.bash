@@ -38,6 +38,7 @@ export LSCOLORS=exfxcxdxbxegedabagacad
 # terminal
 alias ls="ls -a"
 alias l="ls"
+alias rm="rm -i"
 # git
 alias gs="git status"
 alias ga="git add"
