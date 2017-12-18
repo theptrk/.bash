@@ -1,6 +1,19 @@
+# terminal
 alias bp="vim ~/.bash_profile"
 alias bpr="source ~/.bash_profile"
 alias vrc="vim ~/.vimrc"
+alias ls="ls -a1"
+alias l="ls"
+## ensure every file delete
+alias rm="rm -i"
+
+# git
+alias gs="git status"
+alias ga="git add"
+alias gcm="git commit -m"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gpo="git push origin"
 
 ######
 #
@@ -34,18 +47,3 @@ prompt
 
 export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxegedabagacad
-
-# terminal
-alias ls="ls -a"
-alias l="ls"
-alias rm="rm -i"
-# git
-alias gs="git status"
-alias ga="git add"
-alias gcm="git commit -m"
-alias gd="git diff"
-alias gpo="git push origin"
-
-# troubleshoot
-# set bash as default if you installed zsh
-# chsh -s /bin/bash
