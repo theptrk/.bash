@@ -1,14 +1,26 @@
-# terminal
+# vim to shortcuts
 alias bp="vim ~/.bash_profile"
 alias bpr="source ~/.bash_profile"
 alias vrc="vim ~/.vimrc"
-alias ls="ls -a1"
+
+# terminal
+alias cp='cp -iv'                            # Preferred 'cp' implementation
+alias mv='mv -iv'                            # Preferred 'mv' implementation
+alias mkdir='mkdir -pv'                      # Preferred 'mkdir' implementation
+alias ls="ls -FGlA1"
 alias l="ls"
-## ensure every file delete
-alias rm="rm -i"
+alias rm="rm -i"    			     # ensure every file is confirmed
+cd() { builtin cd "$@"; l; }                 # Always list directory contents upon 'cd'
+alias ..='cd ../'                            # Go back 1 directory level
+alias ...='cd ../../'                        # Go back 2 directory levels
+alias f='open -a Finder ./'                  # f:            Opens current directory in MacOS Finder
+alias c='clear'                              # c:            Clear terminal display
+mcd () { mkdir -p "$1" && cd "$1"; }         # mcd:          Makes new Dir and jumps inside
+alias teeout='tee ~/Desktop/terminalOut.txt' # teeout:       Pipe content to file on MacOS Desktop
 
 # git
 alias gs="git status"
+alias gr="git rebase"
 alias ga="git add"
 alias gcm="git commit -m"
 alias gd="git diff"
