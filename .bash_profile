@@ -22,10 +22,11 @@ alias teeout='tee ~/Desktop/terminalOut.txt' # teeout:       Pipe content to fil
 alias gs="git status"
 alias gr="git rebase"
 alias ga="git add"
-alias gcm="git commit -m"
 alias gd="git diff"
+alias gcm="git commit -m"
 alias gdc="git diff --cached"
 alias gpo="git push origin"
+alias goto="git checkout"
 
 ######
 #
