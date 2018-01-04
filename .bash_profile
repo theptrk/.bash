@@ -1,6 +1,8 @@
 # vim to shortcuts
 alias bp="vim ~/.bash_profile"
 alias bpr="source ~/.bash_profile"
+alias bpl="vim ~/.bash_profile_local"
+alias bplr="source ~/.bash_profile_local"
 alias vrc="vim ~/.vimrc"
 
 # terminal
