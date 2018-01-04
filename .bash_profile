@@ -60,3 +60,8 @@ prompt
 
 export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxegedabagacad
+
+# local changes here
+if [ -f ~/.bash_profile_local ]; then
+	source ~/.bash_profile_local
+fi

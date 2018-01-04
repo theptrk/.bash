@@ -12,5 +12,10 @@ $ cd && git clone https://github.com/theptrk/.bash.git
 $ ln -s ~/.bash/.bash_profile ~/.bash_profile
 ```
 
+* If you want to create local changes create a "local" bash file
+```
+$ touch ~/.bash_profile_local
+```
+
 sources
 https://natelandau.com/my-mac-osx-bash_profile/
