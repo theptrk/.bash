@@ -17,6 +17,8 @@ alias ..='cd ../'                            # Go back 1 directory level
 alias ...='cd ../../'                        # Go back 2 directory levels
 alias f='open -a Finder ./'                  # f:            Opens current directory in MacOS Finder
 alias c='clear'                              # c:            Clear terminal display
+
+# revite the usefulness of these
 mcd () { mkdir -p "$1" && cd "$1"; }         # mcd:          Makes new Dir and jumps inside
 alias teeout='tee ~/Desktop/terminalOut.txt' # teeout:       Pipe content to file on MacOS Desktop
 
@@ -56,12 +58,26 @@ function prompt {
 	local WHITEBOLD="\[\033[1;37m\]"
 	local RESETCOLOR="\[\e[00m\]"
 
-	export PS1="$BLUE\u $GREEN$ $RESETCOLOR$GREENBOLD\$(git branch 2> /dev/null) $RESETCOLOR"
+        # https://github.com/ryanoasis/public-bash-scripts/blob/master/unix-color-codes.sh
+	local Time12h="\T"
+	local Time12a="\@"
+	local PathShort="\w"
+	local PathFull="\W"
+	local NewLine="\n"
+	local Jobs="\j"
+	local RootOrNot="\$"
+
+	export PS1="$BLUE$PathShort $GREEN$RootOrNot $GREENBOLD\$(git branch 2> /dev/null) $RESETCOLOR"
 }
 prompt
 
-export CLICOLOR=1
-export LSCOLORS=exfxcxdxbxegedabagacad
+### this seems to not make a difference on or off
+# Use ANSI color sequences to distinguish file types (man ls)
+# export CLICOLOR=1
+# The value of this variable describes what color to use
+# for which attribute when colors are enabled with
+# CLICOLOR. (man ls)
+# export LSCOLORS=exfxcxdxbxegedabagacad
 
 # local changes here
 if [ -f ~/.bash_profile_local ]; then
