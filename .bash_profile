@@ -18,6 +18,10 @@ alias ...='cd ../../'                        # Go back 2 directory levels
 alias f='open -a Finder ./'                  # f:            Opens current directory in MacOS Finder
 alias c='clear'                              # c:            Clear terminal display
 
+# -n shows line numbers
+# --color makes sure matches are highlighted
+alias grep='grep -n --color=always'
+
 # revite the usefulness of these
 mcd () { mkdir -p "$1" && cd "$1"; }         # mcd:          Makes new Dir and jumps inside
 alias teeout='tee ~/Desktop/terminalOut.txt' # teeout:       Pipe content to file on MacOS Desktop
